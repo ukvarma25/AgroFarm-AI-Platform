@@ -1,215 +1,184 @@
 # 🌱 AgroFarm AI
+
 ### An Intelligent Multimodal Explainable AI Platform for Smart Precision Agriculture
 
-**Making agricultural decisions smarter, more transparent, and data-driven with Artificial Intelligence.**
+**Smarter agricultural decisions through Machine Learning, Computer Vision, and Explainable AI.**
 
-AgroFarm AI is an AI-powered precision agriculture platform designed to assist farmers with crop selection, agricultural data analysis, farming recommendations, and intelligent decision support. The platform combines machine learning, web technologies, and explainable AI to make agricultural predictions more understandable.
+AgroFarm AI is an academic AI-powered precision agriculture project designed to bring agricultural data analysis, crop recommendation, and interpretable machine learning into a unified web application.
 
-<!-- Replace this placeholder with a genuine screenshot of your application -->
-<!-- ![AgroFarm AI Dashboard](docs/images/dashboard.png) -->
+The project explores how machine learning, deep learning, weather intelligence, and Explainable AI can help farmers and agricultural stakeholders make more informed decisions.
 
----
-
-## 📌 Table of Contents
-
-- [Overview](#-overview)
-- [Key Features](#-key-features)
-- [System Architecture](#-system-architecture)
-- [Technology Stack](#-technology-stack)
-- [Machine Learning and Explainable AI](#-machine-learning-and-explainable-ai)
-- [Project Structure](#-project-structure)
-- [Getting Started](#-getting-started)
-- [Environment Configuration](#-environment-configuration)
-- [Running the Application](#-running-the-application)
-- [Model Status](#-model-status)
-- [Datasets](#-datasets)
-- [Security](#-security)
-- [Limitations](#-limitations)
-- [Future Enhancements](#-future-enhancements)
-- [Contributing](#-contributing)
-- [License](#-license)
+[**View Repository**](https://github.com/ukvarma25/Agri)
 
 ---
 
-## 🌾 Overview
+## 📌 About the Project
 
-Agriculture depends on several factors, including soil characteristics, climate, crop selection, and market conditions. Making informed decisions from these factors can be challenging when data and analytical tools are scattered across different sources.
+Agriculture faces challenges such as crop diseases, nutrient deficiencies, unpredictable weather, inefficient resource utilization, and limited access to timely agricultural guidance.
 
-AgroFarm AI aims to bring these capabilities together in a unified platform.
-
-The project combines a web-based user interface, backend APIs, agricultural datasets, and machine learning components to support data-driven agricultural decisions.
+Traditional approaches often address these problems separately. AgroFarm AI explores an integrated approach that brings multiple agricultural workflows together and makes supported machine-learning predictions easier to interpret.
 
 ### 🎯 Project Objectives
 
-- Support crop selection using machine learning.
-- Provide interpretable predictions through Explainable AI.
-- Organize agricultural information through an integrated dashboard.
-- Explore crop health, pest, weed, yield, and market-related prediction capabilities.
-- Provide a modular foundation for future precision agriculture applications.
-
----
+- Develop a data-driven crop recommendation system.
+- Integrate agricultural data processing and machine learning into a web application.
+- Use Explainable AI to improve the interpretability of supported predictions.
+- Explore crop-health analysis, fertilizer recommendations, yield prediction, and agricultural risk assessment.
+- Provide a foundation for multilingual agricultural assistance and consolidated farm reports.
 
 ## ✨ Key Features
 
-### 🌱 1. Crop Recommendation
-- Machine-learning-based crop prediction.
-- Agricultural feature input and prediction workflows.
-- Data-driven assistance for crop selection.
+### 🌾 Crop Recommendation
+Use agricultural input features to generate crop recommendations through the supported machine-learning pipeline.
 
-### 🧠 2. Explainable AI
-- SHAP-based interpretation for supported machine learning predictions.
-- Feature-contribution insights to help users understand model outputs.
-- An emphasis on model transparency rather than predictions alone.
+### 🧠 Explainable AI
+Use SHAP-based feature-contribution explanations to help users understand the supported crop recommendation model's outputs.
 
-### 🌿 3. Agricultural Analysis
-The project includes data and application components for exploring:
+### 🌿 Agricultural Analysis
+The application includes or is designed to support workflows for soil analysis, fertilizer recommendations, crop health, and farm information.
 
-- Soil and agricultural information.
-- Fertilizer-related recommendations.
-- Crop yield analysis.
-- Market price analysis.
-- Weather information and agricultural assistance.
+### 🌦️ Weather and Risk Intelligence
+The project design incorporates weather information and agricultural risk assessment to support more context-aware decisions, subject to available integrations.
 
-The availability of individual features depends on their current implementation and configuration.
+### 🔬 Crop Health and Computer Vision
+Disease, pest, weed, and nutrient-deficiency analysis are part of the broader project scope. These capabilities require their corresponding trained models and validated inference pipelines.
 
-### 🔬 4. Crop Health and Field Analysis
+### 📊 Analytics and Reports
+The platform is designed to organize prediction outputs, evaluation information, and agricultural insights through a unified interface.
 
-The project includes datasets and supporting components for exploring:
-
-- Plant disease classification.
-- Pest identification.
-- Weed classification.
-- Crop image analysis.
-
-These capabilities require the appropriate trained models and validated inference pipelines before they can be considered production-ready.
-
-### 📊 5. Analytics and Evaluation
-- Model evaluation scripts.
-- Performance visualization support.
-- Dataset-driven experimentation.
-- A foundation for comparing machine learning approaches.
-
-### 💻 6. Web Application
-- React-based user interface.
-- Backend API integration.
-- Modular application pages.
-- A structure designed to support further feature development.
+### 💬 AI-Assisted Agricultural Guidance
+The project explores an agricultural assistant to help users interact with farming information. Its functionality depends on the configured AI service and available application context.
 
 ---
 
 ## 🏗️ System Architecture
 
-AgroFarm AI follows a modular architecture that separates the user interface, backend logic, data, and machine learning components.
+AgroFarm AI separates the web interface, backend application logic, data processing, and machine-learning components.
 
 ```text
-                  ┌──────────────────────────┐
-                  │        User              │
-                  └────────────┬─────────────┘
-                               │
-                  ┌────────────▼─────────────┐
-                  │     React Frontend       │
-                  │     Vite Development     │
-                  └────────────┬─────────────┘
-                               │ HTTP / REST API
-                  ┌────────────▼─────────────┐
-                  │       FastAPI Backend    │
-                  │ Authentication and APIs  │
-                  └────────────┬─────────────┘
-                               │
-                ┌──────────────┼──────────────┐
-                │              │              │
-       ┌────────▼──────┐ ┌─────▼──────┐ ┌────▼────────┐
-       │ ML Inference  │ │ Database   │ │ External    │
-       │ and Prediction│ │ and Data   │ │ APIs        │
-       └────────┬──────┘ └────────────┘ └─────────────┘
-                │
-       ┌────────▼────────┐
-       │ ML Models and   │
-       │ Explainability  │
-       └─────────────────┘
+                  ┌──────────────────────┐
+                  │     Farmer / User    │
+                  └──────────┬───────────┘
+                             │
+                  ┌──────────▼───────────┐
+                  │    React Frontend    │
+                  │ Dashboard and Pages  │
+                  └──────────┬───────────┘
+                             │
+                      REST API Requests
+                             │
+                  ┌──────────▼───────────┐
+                  │    Backend Services  │
+                  │ Authentication / API │
+                  └──────────┬───────────┘
+                             │
+              ┌──────────────┼──────────────┐
+              │              │              │
+      ┌───────▼──────┐ ┌─────▼──────┐ ┌────▼────────┐
+      │ Crop ML      │ │ Agricultural│ │ External    │
+      │ Inference    │ │ Data / DB   │ │ Integrations│
+      └───────┬──────┘ └─────────────┘ └─────────────┘
+              │
+      ┌───────▼────────┐
+      │ SHAP Explainability│
+      │ for Supported Model│
+      └────────┬────────┘
+               │
+      ┌────────▼─────────┐
+      │ Prediction Output│
+      │ and User Insights│
+      └──────────────────┘
 ```
 
-*This is a conceptual overview. Update the diagram if the implemented request flow or deployment architecture differs.*
-
----
+*This is a conceptual architecture. Refer to the current source code and service configuration for the exact implementation.*
 
 ## 🛠️ Technology Stack
 
-| Category | Technologies |
+| Component | Technologies |
 |---|---|
 | Frontend | React, JavaScript, Vite |
 | Backend | Python, FastAPI |
-| Machine Learning | Scikit-learn, XGBoost, Pandas, NumPy |
+| Machine Learning | XGBoost and Python data-science libraries |
 | Explainable AI | SHAP |
-| Data Storage | SQLite configuration and agricultural CSV datasets |
-| API Integration | REST APIs |
-| Development Tools | Git, GitHub, Visual Studio Code |
+| Data Processing | Pandas, NumPy |
+| Data Sources | Agricultural datasets and CSV files |
+| Development | Git, GitHub, Visual Studio Code |
 
-*The table describes the project's intended technology areas. Retain only packages and services confirmed in the final implementation and dependency files.*
+*The actual installed dependencies and integrated services are defined by the repository's code and configuration files.*
 
 ---
 
-## 🤖 Machine Learning and Explainable AI
-
-Machine learning is a central component of AgroFarm AI.
-
-The project contains datasets, training scripts, inference-related code, and saved model artifacts for agricultural prediction tasks.
+## 🤖 Machine Learning and Explainability
 
 ### Crop Recommendation
 
-The crop recommendation workflow is designed to use agricultural input features to predict a suitable crop using a trained machine learning model.
+The crop recommendation component uses a trained XGBoost multiclass classification model in the audited development setup.
 
-The prediction pipeline can be evaluated using classification metrics such as:
+The workflow consists of:
 
-- Accuracy
-- Precision
-- Recall
-- F1-score
-- Confusion matrix
+1. Receiving agricultural input features.
+2. Preparing the input for the model.
+3. Generating a crop prediction.
+4. Producing SHAP-based feature-contribution information.
+5. Presenting the output through the application.
 
 ### Explainable AI with SHAP
 
-SHAP (SHapley Additive exPlanations) can help explain how input features contribute to a supported model prediction.
+SHAP (SHapley Additive exPlanations) helps explain how input features contribute to a model's output.
 
-The goal is to improve transparency and help users understand the factors influencing an output.
+This is important in agricultural decision support because users need more than a prediction: they also need to understand which input factors influenced it.
+
+Explanations are meaningful only for a supported model and its actual inference pipeline.
 
 ### Model Evaluation
 
-Model performance should be reported only after evaluation on an appropriate held-out dataset. Training results alone should not be presented as evidence of real-world agricultural accuracy.
+Classification models can be evaluated using accuracy, precision, recall, F1-score, and confusion matrices. Regression models can be evaluated using MAE, RMSE, and R².
+
+Performance results should be published only when they can be traced to the corresponding dataset, model version, and evaluation procedure.
+
+---
+
+## 📊 Model and Feature Status
+
+AgroFarm AI is an evolving academic prototype. Not every planned feature currently has a trained and validated model.
+
+| Module | Status |
+|---|---|
+| Crop recommendation | Trained model available in the audited development setup |
+| SHAP crop explanation | Integrated for the supported model |
+| Plant disease detection | Training required unless valid trained weights are supplied |
+| Nutrient-deficiency detection | Training required unless valid trained weights are supplied |
+| Pest detection | Training required unless valid trained weights are supplied |
+| Weed detection | Training required unless valid trained weights are supplied |
+| Yield prediction | Training required unless a valid trained model is supplied |
+| Smart irrigation | Rule-based or simulation workflow where implemented |
+| Weather and AI assistant | Depends on configuration and available integrations |
+
+**Important:** A visible interface or sample visualization does not establish that an underlying model is trained. Unavailable modules should report their status clearly rather than generate fabricated predictions.
 
 ---
 
 ## 📂 Project Structure
 
-The repository contains the following major project components:
+The repository contains frontend, backend, and machine-learning components. The exact directory layout may vary by revision.
 
 ```text
 AgroFarm-AI/
-├── app/                    # Application entry points and schemas
-├── backend/                # FastAPI backend
+├── backend/
 │   └── app/
-│       ├── core/            # Core configuration and security
-│       ├── ml/              # ML-related components
-│       ├── models/          # Data models
-│       ├── routers/         # API routes
-│       └── utils/           # Utility modules
-├── datasets/                # Agricultural datasets
-│   └── vision/              # Image datasets
-├── frontend/                # Frontend-related assets
-├── ml/                      # ML evaluation artifacts
-├── saved_models/            # Local model artifacts, if present
-├── web/                     # React frontend
+├── web/
 │   └── src/
-├── crop_inference.py        # Crop inference-related code
-├── evaluation.py            # Evaluation utilities
-├── fertilizer_rules.py      # Fertilizer-related logic
-├── train_models.py          # Model training script
-├── train_publication.py     # Additional training/evaluation script
-├── requirements.txt         # Python dependencies
-└── README.md                # Project documentation
+├── ml/
+│   └── saved_models/
+├── datasets/
+├── requirements.txt
+├── .gitignore
+└── README.md
 ```
 
-*Directory contents may vary between local and GitHub copies. Model artifacts and generated evaluation files may be intentionally excluded from version control.*
+Large model artifacts, local databases, generated evaluation files, and virtual environments may be excluded from version control.
+
+Check the actual repository tree before assuming every listed directory is present.
 
 ---
 
@@ -217,74 +186,54 @@ AgroFarm-AI/
 
 ### Prerequisites
 
-Install the following tools before running the project:
+- Python compatible with the project dependencies
+- Node.js and npm
+- Git
+- Visual Studio Code (recommended)
 
-- Python compatible with the project's dependencies.
-- Node.js and npm.
-- Git.
-- Visual Studio Code (recommended).
+### 1. Clone the repository
 
-### 1. Clone the Repository
-
-```bash
+```powershell
 git clone https://github.com/ukvarma25/Agri.git
 cd Agri
 ```
 
-If the source files are located inside a nested `Agri/` directory in the repository, enter that directory before continuing.
+If the project is stored inside a nested `Agri` directory, enter that directory before continuing.
 
-### 2. Set Up the Python Environment
+### 2. Create the Python environment
 
-On Windows PowerShell:
+Run the following commands from the directory containing the relevant `requirements.txt`:
 
 ```powershell
 python -m venv venv
 .\venv\Scripts\Activate.ps1
-```
-
-Install the Python dependencies:
-
-```powershell
+python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-If the backend has a separate dependency file, install those dependencies as well:
+### 3. Configure the backend
 
-```powershell
-pip install -r backend/requirements.txt
-```
-
-Only run the second installation if that file exists and is required by your setup.
-
-### 3. Configure Environment Variables
-
-Create a local environment file using the example configuration:
+If the example file exists and you do not already have a local configuration:
 
 ```powershell
 Copy-Item backend\.env.example backend\.env
 ```
 
-If `backend\.env` already exists, do not overwrite it blindly.
+Do not overwrite an existing `.env` file without checking its contents.
 
-Update the local configuration with the credentials and settings required by your environment.
+### 4. Start the backend
 
-### 4. Start the Backend
-
-From the project root, run:
+From the appropriate project root:
 
 ```powershell
 python -m uvicorn backend.app.main:app --reload --host 127.0.0.1 --port 8000
 ```
 
-If the application entry point or import path differs in your checked-out version, use the startup command documented for that version.
+If your checkout uses a different application entry point, follow its actual backend configuration.
 
-When available, backend API documentation can usually be accessed at:
+### 5. Start the frontend
 
-`http://127.0.0.1:8000/docs`
-
-### 5. Start the Frontend
-
-Open a second terminal and navigate to the frontend directory:
+Open a second terminal:
 
 ```powershell
 cd web
@@ -292,144 +241,57 @@ npm install
 npm run dev
 ```
 
-Open the local URL printed by Vite in your terminal.
+Open the local URL printed by Vite.
 
-**Important:** The commands above are a setup guide, not a claim that every environment has been verified. Confirm the correct entry points, scripts, dependency files, and API configuration against your current code before publishing these instructions as tested.
+### 6. Verify the application
 
----
+- Confirm that the backend starts successfully.
+- Confirm that the frontend loads.
+- Test the crop recommendation workflow.
+- Verify the corresponding SHAP explanation.
+- Check that unavailable models display an appropriate status.
 
-## ⚙️ Environment Configuration
-
-The backend example configuration may include variables such as:
-
-```dotenv
-DATABASE_URL=sqlite:///./agrofarm.db
-SECRET_KEY=replace-with-a-secure-random-value
-ACCESS_TOKEN_EXPIRE_MINUTES=1440
-ALGORITHM=HS256
-
-OPENWEATHER_API_KEY=
-GROQ_API_KEY=
-GROQ_MODEL=openai/gpt-oss-20b
-GROQ_BASE_URL=https://api.groq.com/openai/v1
-
-CORS_ORIGINS=http://127.0.0.1:5173,http://localhost:5173
-```
-
-Configure only the integrations required by your version of the application.
-
-Never commit real API keys, production credentials, or personal secrets.
-
----
-
-## 📈 Model Status
-
-Model availability must be reported separately from application UI availability.
-
-| Component | Status |
-|---|---|
-| Crop recommendation | Verify model availability and inference locally |
-| SHAP explanations | Verify against the actual supported model |
-| Disease detection | Requires verified trained weights and inference testing |
-| Pest detection | Requires verified trained weights and inference testing |
-| Weed detection | Requires verified trained weights and inference testing |
-| Yield prediction | Requires a verified trained model and evaluation |
-| Market price prediction | Requires a verified trained model and evaluation |
-| Fertilizer recommendations | Verify implementation and input validation |
-
-Update this table with evidence from the current codebase and successful tests before presenting the project as complete.
-
----
-
-## 📚 Datasets
-
-The project contains agricultural tabular datasets and sample image data organized for machine learning experiments.
-
-Dataset documentation should include:
-
-- Dataset name and source.
-- License and permitted usage.
-- Features and target labels.
-- Number of records or images.
-- Preprocessing steps.
-- Training, validation, and test split methodology.
-
-Do not redistribute datasets unless their licenses permit it. Include source references and attribution where required.
+These are setup instructions to validate against the current checkout, not a guarantee that every installation or feature has been tested.
 
 ---
 
 ## 🔐 Security
 
-Security practices for this project include:
+- Keep API keys and passwords in local environment files.
+- Never commit real secrets or production credentials.
+- Keep virtual environments and unnecessary generated artifacts out of Git.
+- Use secure secret keys for deployed environments.
+- Review the repository's current files and Git history before making it public.
 
-- Keeping local `.env` files out of version control.
-- Using environment variables for credentials.
-- Excluding virtual environments and generated files from Git.
-- Using secure secret keys for deployed environments.
-- Validating user input and protecting authenticated API routes.
+Adding a file to `.gitignore` does not remove a secret that was committed previously.
 
-Before making the repository public, review the complete Git history and current files for accidentally committed credentials.
+## 📷 Screenshots and Demo
 
----
+Add genuine screenshots from the running application to `docs/images/` and link them here.
 
-## ⚠️ Limitations
+| Screenshot | Suggested file |
+|---|---|
+| Dashboard | `docs/images/dashboard.png` |
+| Crop recommendation | `docs/images/crop-recommendation.png` |
+| SHAP explanation | `docs/images/shap-explanation.png` |
+| Fertilizer recommendation | `docs/images/fertilizer.png` |
+| AI assistant | `docs/images/assistant.png` |
 
-AgroFarm AI is a development and research project. Its outputs should not automatically be treated as validated agronomic advice.
+Replace these placeholders with real screenshots before presenting the README as complete.
 
-- Model predictions depend on the quality and representativeness of the training data.
-- Real-world performance may differ from offline evaluation results.
-- Untrained or unavailable models cannot provide validated predictions.
-- External integrations may require valid credentials and network access.
-- Agricultural decisions should consider local conditions and qualified expert guidance.
+## 🔭 Future Enhancements
 
----
+- Train and validate additional crop-health models.
+- Improve dataset documentation and reproducibility.
+- Expand weather-aware agricultural analysis.
+- Strengthen model evaluation and automated testing.
+- Improve multilingual and voice-based assistance.
+- Explore IoT sensors and remote-sensing data integration.
+- Develop secure, reliable deployment workflows.
+- 
+**Project repository:** [github.com/ukvarma25/Agri](https://github.com/ukvarma25/Agri)
 
-## 🔮 Future Enhancements
-
-Potential future improvements include:
-
-- Validated plant disease classification.
-- Pest and weed detection using object detection models.
-- Explainability visualizations for supported predictions.
-- Weather-aware crop recommendations.
-- District-level yield prediction.
-- Agricultural market price forecasting.
-- Improved dataset provenance and model versioning.
-- Automated testing and continuous integration.
-- Deployment with secure configuration and monitoring.
 
 ---
 
-## 🤝 Contributing
-
-Contributions, suggestions, and bug reports are welcome.
-
-1. Fork the repository.
-2. Create a feature branch.
-3. Implement and test your changes.
-4. Commit with a descriptive message.
-5. Open a pull request explaining the changes.
-
-Please do not include private credentials or datasets that you are not authorized to redistribute.
-
----
-
-## 📄 License
-
-A license has not yet been specified for this repository.
-
-Before adding an open-source license, choose one that matches your intended usage and any third-party dataset or code restrictions. Until a license is added, others generally should not assume they have permission to reuse or redistribute the project.
-
----
-
-## 👨‍💻 Author
-
-**Uday Kumar Varma**
-
-B.Tech — Computer Science and Engineering (Data Science)
-
-GitHub: [@ukvarma25](https://github.com/ukvarma25)
-
----
-
-*AgroFarm AI — Exploring the future of intelligent and explainable precision agriculture.*
+*AgroFarm AI — towards more transparent, data-driven precision agriculture.*
