@@ -1,0 +1,5 @@
+Documented synthetic sample set for offline training.
+Disease classes mimic PlantVillage-style leaf symptoms via color/texture prototypes.
+Pest classes mimic IP102-style pest cues.
+Weed classes mimic crop vs weed canopy colors.
+Not a substitute for the full public datasets; replace folders to retrain on real images.
