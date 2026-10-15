@@ -55,40 +55,8 @@ The project explores an agricultural assistant to help users interact with farmi
 
 AgroFarm AI separates the web interface, backend application logic, data processing, and machine-learning components.
 
-```text
-                  ┌──────────────────────┐
-                  │     Farmer / User    │
-                  └──────────┬───────────┘
-                             │
-                  ┌──────────▼───────────┐
-                  │    React Frontend    │
-                  │ Dashboard and Pages  │
-                  └──────────┬───────────┘
-                             │
-                      REST API Requests
-                             │
-                  ┌──────────▼───────────┐
-                  │    Backend Services  │
-                  │ Authentication / API │
-                  └──────────┬───────────┘
-                             │
-              ┌──────────────┼──────────────┐
-              │              │              │
-      ┌───────▼──────┐ ┌─────▼──────┐ ┌────▼────────┐
-      │ Crop ML      │ │ Agricultural│ │ External    │
-      │ Inference    │ │ Data / DB   │ │ Integrations│
-      └───────┬──────┘ └─────────────┘ └─────────────┘
-              │
-      ┌───────▼────────┐
-      │ SHAP Explainability│
-      │ for Supported Model│
-      └────────┬────────┘
-               │
-      ┌────────▼─────────┐
-      │ Prediction Output│
-      │ and User Insights│
-      └──────────────────┘
-```
+<img width="2300" height="1742" alt="system architecture" src="https://github.com/user-attachments/assets/32f4c79d-5d58-47c1-973e-78ce91511f9b" />
+
 
 *This is a conceptual architecture. Refer to the current source code and service configuration for the exact implementation.*
 
