@@ -150,102 +150,17 @@ Check the actual repository tree before assuming every listed directory is prese
 
 ---
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Python compatible with the project dependencies
-- Node.js and npm
-- Git
-- Visual Studio Code (recommended)
-
-### 1. Clone the repository
-
-```powershell
-git clone https://github.com/ukvarma25/Agri.git
-cd Agri
-```
-
-If the project is stored inside a nested `Agri` directory, enter that directory before continuing.
-
-### 2. Create the Python environment
-
-Run the following commands from the directory containing the relevant `requirements.txt`:
-
-```powershell
-python -m venv venv
-.\venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-```
-
-### 3. Configure the backend
-
-If the example file exists and you do not already have a local configuration:
-
-```powershell
-Copy-Item backend\.env.example backend\.env
-```
-
-Do not overwrite an existing `.env` file without checking its contents.
-
-### 4. Start the backend
-
-From the appropriate project root:
-
-```powershell
-python -m uvicorn backend.app.main:app --reload --host 127.0.0.1 --port 8000
-```
-
-If your checkout uses a different application entry point, follow its actual backend configuration.
-
-### 5. Start the frontend
-
-Open a second terminal:
-
-```powershell
-cd web
-npm install
-npm run dev
-```
-
-Open the local URL printed by Vite.
-
-### 6. Verify the application
-
-- Confirm that the backend starts successfully.
-- Confirm that the frontend loads.
-- Test the crop recommendation workflow.
-- Verify the corresponding SHAP explanation.
-- Check that unavailable models display an appropriate status.
-
-These are setup instructions to validate against the current checkout, not a guarantee that every installation or feature has been tested.
-
----
-
-## 🔐 Security
-
-- Keep API keys and passwords in local environment files.
-- Never commit real secrets or production credentials.
-- Keep virtual environments and unnecessary generated artifacts out of Git.
-- Use secure secret keys for deployed environments.
-- Review the repository's current files and Git history before making it public.
-
-Adding a file to `.gitignore` does not remove a secret that was committed previously.
-
-## 📷 Screenshots and Demo
-
-Add genuine screenshots from the running application to `docs/images/` and link them here.
 
 | Screenshot | Suggested file |
 |---|---|
-| Dashboard | `docs/images/dashboard.png` |
-| Crop recommendation | `docs/images/crop-recommendation.png` |
-| SHAP explanation | `docs/images/shap-explanation.png` |
-| Fertilizer recommendation | `docs/images/fertilizer.png` |
-| AI assistant | `docs/images/assistant.png` |
+| Dashboard | <img width="1886" height="877" alt="Screenshot (43)" src="https://github.com/user-attachments/assets/101cc234-083e-4876-99f2-cb69436bfbef" /> |
+| Crop recommendation | <img width="1887" height="866" alt="Screenshot (44)" src="https://github.com/user-attachments/assets/ed040c9f-190c-4108-a1b4-277732487bab" />|
+| SHAP explanation | <img width="1895" height="874" alt="Screenshot (54)" src="https://github.com/user-attachments/assets/1e24cd0c-d56c-4bf5-85a7-9050a716e95e" /> |
+| Fertilizer recommendation | <img width="1920" height="855" alt="Screenshot (49)" src="https://github.com/user-attachments/assets/bd2e8640-2fcd-4c7e-a809-6d50f1e7b348" /> |
+| AI assistant |<img width="1917" height="853" alt="Screenshot (53)" src="https://github.com/user-attachments/assets/9f3401e6-d50d-460f-8f65-4e192b06a3a0" />
+|
 
-Replace these placeholders with real screenshots before presenting the README as complete.
+
 
 ## 🔭 Future Enhancements
 
@@ -257,7 +172,7 @@ Replace these placeholders with real screenshots before presenting the README as
 - Explore IoT sensors and remote-sensing data integration.
 - Develop secure, reliable deployment workflows.
 - 
-**Project repository:** [github.com/ukvarma25/Agri](https://github.com/ukvarma25/Agri)
+**Project repository:** (https://github.com/ukvarma25/AgroFarm-AI-Platform)
 
 
 ---
